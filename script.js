@@ -1,3 +1,19 @@
+/**문자열을 35자 이내로 자르고 ...을 붙이는 함수
+ * 
+ * @param {String} inputString
+ * @returns {String}
+ */
+function limitStringLength(inputString) {
+  if (inputString.length > 35) {
+    // 문자열이 최대 길이를 초과하면 최대 길이까지 자름
+    return inputString.substring(0, 35)+"...";
+    // 또는 다른 조치를 취할 수 있음 (예: 경고 메시지 표시, 로깅 등)
+  } else {
+    // 최대 길이를 초과하지 않으면 그대로 반환
+    return inputString;
+  }
+}
+
 /**JSON 데이터를 가져오는 함수
  * 
  * @returns {Promise}
@@ -55,7 +71,7 @@ function renderContent(searchTerm = "") {
         contentDiv.classList.add("mb-3");
 
         var img = item.img || ''; // JSON 데이터의 이미지 경로
-        var title = item.title || "";
+        var title = limitStringLength(item.title || "");
         var description = item.description || "";
         var link = item.link || '';
 

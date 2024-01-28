@@ -33,3 +33,20 @@
 .conts-main {
     margin: 1rem;
 }
+
+@media screen and (max-width: 600px) {
+    .content {
+        display: block;
+        border: 1px solid gray;
+        margin-top: 34px;
+    }
+
+    .img {
+        width: 92%;
+        margin: 4%;
+    }
+
+    .conts-main {
+        margin: 3%;
+    }
+}
