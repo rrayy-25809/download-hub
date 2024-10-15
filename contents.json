@@ -43,8 +43,14 @@
     },
     {
         "img": "/files/night dancer.jpg",
-        "link": "/files/imase - Night Dancer(rrayy remix)",
-        "title": "rrayy & ID - ID (Need You)",
+        "link": "/files/imase - Night Dancer(rrayy remix).mp3",
+        "title": "imase - Night Dancer(rrayy remix)",
         "description": "마침내 나온 나이트댄서 리믹스"
+    },
+    {
+        "img": "/files/it_will_come_to_u.jpg",
+        "link": "/files/It Will Come to u remix.mp3",
+        "title": "Acrux & Relimax - It Will Come To You (feat. Sergi Yaro) [RRAYY REMIX]",
+        "description": "New Rocktronic Remix"
     }
 ]
