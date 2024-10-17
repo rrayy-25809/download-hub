@@ -57,8 +57,7 @@ function renderContent(searchTerm = "") {
       var contents = document.getElementById("contents");
       contents.innerHTML = ""; // 기존 내용 초기화
       var filteredData = filterItems(data, searchTerm, "title", "description");
-      // filteredData를 역순으로 정렬
-      filteredData.reverse();
+      //외않되filteredData.reverse();// filteredData를 역순으로 정렬
       var renderCount = 0; // rendercount 변수 이름 수정
       filteredData.forEach(item => {
         if (rendercount % 4 == 0 && rendercount) {
