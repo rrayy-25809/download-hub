@@ -57,7 +57,9 @@ function renderContent(searchTerm = "") {
       var contents = document.getElementById("contents");
       contents.innerHTML = ""; // 기존 내용 초기화
       var filteredData = filterItems(data, searchTerm, "title", "description");
-      var rendercount = 0;
+      // filteredData를 역순으로 정렬
+      filteredData.reverse();
+      var renderCount = 0; // rendercount 변수 이름 수정
       filteredData.forEach(item => {
         if (rendercount % 4 == 0 && rendercount) {
           var contentDivforad = document.createElement("div");
@@ -71,7 +73,7 @@ function renderContent(searchTerm = "") {
         contentDiv.classList.add("mb-3");
 
         var img = item.img || ''; // JSON 데이터의 이미지 경로
-        var title = limitStringLength(item.title || "");
+        var title = item.title || "";
         var description = item.description || "";
         var link = item.link || '';
 
