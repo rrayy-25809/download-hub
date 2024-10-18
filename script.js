@@ -23,7 +23,9 @@ function fetchData() {
     fetch('contents.json') // 데이터가 있는 URL이나 파일 경로를 넣어주세요
       .then(response => response.json())
       .then(data => {
-        resolve(data);
+        // 데이터를 역순으로 바꿈
+        const reversedData = Array.isArray(data) ? data.reverse() : data; // data가 배열일 경우에만 역순으로 변환
+        resolve(reversedData);
       })
       .catch(error => {
         reject(error);
