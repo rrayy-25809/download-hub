@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router-dom';
+import type { KeyboardEvent } from 'react';
 
-function handleKeyPress(event) {
-  // 엔터 키의 키코드는 13입니다.
-  if (event.keyCode === 13) {
-
+function handleKeyPress(event: KeyboardEvent<HTMLInputElement>) {
+  // Enter 키 처리
+  if (event.key === 'Enter') {
+    // TODO: 검색 동작 추가
   }
 }
 
@@ -25,7 +26,7 @@ function App({}) {
                 aria-label="Search"
                 onKeyUp={handleKeyPress}>
               </input>
-              <button className="btn btn-outline-primary" onClick={() => {}}>
+              <button className="btn btn-outline" onClick={() => {}}>
                 Search
               </button>
             </div>
