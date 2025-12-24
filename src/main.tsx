@@ -6,6 +6,7 @@ import App from './App'
 // CSS Imports
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.scss'
+import 'bootstrap-icons/font/bootstrap-icons.min.css'
 // Pages Imports
 import Item_Page from './pages/Item_page';
 import List_Page from './pages/List_page';
