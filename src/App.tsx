@@ -1,14 +1,6 @@
 import { Outlet } from 'react-router-dom';
-import type { KeyboardEvent } from 'react';
 
-function handleKeyPress(event: KeyboardEvent<HTMLInputElement>) {
-  // Enter 키 처리
-  if (event.key === 'Enter') {
-    // TODO: 검색 동작 추가
-  }
-}
-
-function App({}) {
+function App({set_searchTerm}:{set_searchTerm: (Term: string) => any}) {
   return (
     <>
       <div className="header">
@@ -24,9 +16,18 @@ function App({}) {
                 type="search"
                 placeholder="검색"
                 aria-label="Search"
-                onKeyUp={handleKeyPress}
+                onKeyUp={(event) => {
+                  // Enter 키 처리
+                  if (event.key === 'Enter') {
+                    const input_element = event.currentTarget;
+                    set_searchTerm(input_element.value);
+                  }
+                }}
               ></input>
-              <button className="btn btn-outline" onClick={() => {}}>
+              <button className="btn btn-outline" onClick={() => {
+                const input_element = document.getElementById("searchInput") as HTMLInputElement;
+                set_searchTerm(input_element.value);
+              }}>
                 Search
               </button>
             </div>
