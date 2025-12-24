@@ -15,7 +15,7 @@ function ItemCard({img, title, description, index}: CardProp) {
             <div className="conts-main">
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <Link className="btn btn-primary" to={`content/${index}`} role="button">Download</Link>
+                <Link className="btn" to={`content/${index}`} role="button">Download</Link>
             </div>
         </div>
     );
